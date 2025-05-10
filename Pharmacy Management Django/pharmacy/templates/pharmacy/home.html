@@ -1,0 +1,24 @@
+{% extends 'pharmacy/base.html' %}
+
+{% block content %}
+<h1>Available Medicines</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for medicine in medicines %}
+        <tr>
+            <td>{{ medicine.medicine_id }}</td>
+            <td>{{ medicine.name }}</td>
+            <td>{{ medicine.stock }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
